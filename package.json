@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "source": "src/index.html",
+  "browserslist": "defaults, since 2016, not dead",
   "scripts": {
     "start": "npm-run-all clean parcel:dev", 
     "build": "npm-run-all clean parcel:build",
