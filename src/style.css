@@ -1,11 +1,19 @@
-html {
-  color-scheme: light dark;
-  font-family: system-ui;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+
+/* resetegem la configuració*/
+body {
+  margin: 0;             
+  line-height: 1.5;      
+  color: black;
 }
+
+
+/* definim el contenedor del contingut */
+.container {
+  max-width: 80%;     
+  margin: 0 auto;       
+  padding: 0 1rem;      
+}
+
 
 /* creem un enllaç al contingut principal*/
 .skip-link {
@@ -14,7 +22,47 @@ html {
   left: 0;
   text-decoration: none;
 }
-
 .skip-link:focus {
   top: 0;       
 }
+
+
+/* Configurem la graella */
+.graella {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* Configurem la targeta */
+.targeta {
+  display: block;
+  text-decoration: none;
+  color:inherit;
+  border: 1px solid #ddd;
+  border-radius: .5rem;
+  padding: .5rem;
+  background: #fff;
+}
+.targeta:hover {
+  transform: translateY(-3px);
+}
+
+/* Definim imatges recepta */
+.targeta img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: .25rem;
+}
+
+/* Configurem títol de recepta */
+.targeta h2 {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
