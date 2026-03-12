@@ -6,3 +6,15 @@ html {
   justify-content: center;
   height: 100%;
 }
+
+/* creem un enllaç al contingut principal*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;       
+}
