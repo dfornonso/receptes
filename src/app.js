@@ -2,47 +2,41 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Inicialitza AOS
   AOS.init({
     duration: 600,
     easing: "ease-out",
     once: true
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({ duration: 600, easing: "ease-out", once: true });
 
-  // === 1) Obtén nom de pàgina REAL ===
-  let current = location.pathname;
+  const links = document.querySelectorAll("nav ul li a");
 
-  // Si és "/" o acaba amb "/" → home
-  if (current === "/" || current.endsWith("/")) {
-    current = "index.html";
-  } else {
-    // Agafem l’última part
-    current = current.split("/").pop();
+  // 1) Quan carreguem la pàgina, posem .actiu al link guardat
+  const guardat = localStorage.getItem("menu-actiu");
+  if (guardat) {
+    links.forEach(a => {
+      if (a.getAttribute("href") === guardat) {
+        a.classList.add("actiu");
+      }
+    });
+  }
+  else {
+    guardat="/index.html"
   }
 
-  // Si és buit o raru (file://) → index.html
-  if (!current || current === "" || current.indexOf(".") === -1) {
-    current = "index.html";
-  }
+  // 2) Quan CLICO, actualitzo el .actiu
+  links.forEach(link => {
+    link.addEventListener("click", () => {
 
-  // === 2) Si és una pàgina de detall, activa Categoria ===
-  if (/^det\d+\.html$/i.test(current)) {
-    current = "categoria.html";
-  }
+      // trec els actius
+      links.forEach(a => a.classList.remove("actiu"));
 
-  // === 3) Marca l’element actiu del menú ===
-  document.querySelectorAll("nav a[href]").forEach(a => {
-    const link = a.getAttribute("href").replace("./", "");
+      // poso actiu al clicat
+      link.classList.add("actiu");
 
-    if (link === current) {
-      a.setAttribute("aria-current", "page");
-    } else {
-      a.removeAttribute("aria-current");
-    }
+      // guardo quin link he clicat
+      localStorage.setItem("menu-actiu", link.getAttribute("href"));
+    });
   });
 });
-
-

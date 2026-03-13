@@ -28,9 +28,14 @@ header{
 }
 header nav{
   text-align: center;
-  border-top: 2px solid var(--blau);
-  border-bottom: 2px solid var(--blau);
   text-transform: uppercase;
+  border-bottom: 2px solid var(--blau);
+}
+
+header nav li:first-child{
+  border-bottom: 2px solid var(--blau);
+
+margin-bottom: 1em;
 }
 header nav a {
   text-decoration: none;
@@ -45,13 +50,14 @@ header nav ul {
     margin-left: 0;
 }
 
-header nav a[aria-current="page"] {
+nav a.actiu {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 3px;
-  color: red;      /* o tria un color específic si vols */
+  color: inherit;      /* o tria un color específic si vols */
   font-weight: 700;    /* opcional */
 }
+
 
 
 footer {
