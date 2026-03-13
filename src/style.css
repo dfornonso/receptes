@@ -23,13 +23,43 @@ body {
   padding: 0 1rem;      
 }
 
+header{
+  text-align: center;
+}
+header nav{
+  text-align: center;
+  border-top: 2px solid var(--blau);
+  border-bottom: 2px solid var(--blau);
+  text-transform: uppercase;
+}
+header nav a {
+  text-decoration: none;
+  color: var(--quasi-negre);
+}
+header nav a:hover {
+  color: var(--blau);
+}
+header nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+header nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+  color: red;      /* o tria un color específic si vols */
+  font-weight: 700;    /* opcional */
+}
+
 
 footer {
-    background-color: var(--gris);
-    text-align: center;
-    padding: 20px 0px;
-    width: 100%;
-    font-size: 0.8rem;
+  background-color: var(--gris);
+  text-align: center;
+  padding: 20px 0px;
+  width: 100%;
+  font-size: 0.8rem;
 }
 
 .autor{
@@ -100,7 +130,7 @@ footer {
   border-radius: .5rem;
 }
 .imatge-principal figcaption { 
-  font-size: .6+8rem; 
+  font-size: .6em; 
   color: #555;
 }
 
