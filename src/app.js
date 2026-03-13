@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   else {
-    guardat="/index.html"
+    guardat="/"
   }
 
   // 2) Quan CLICO, actualitzo el .actiu
