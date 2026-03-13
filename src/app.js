@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll("nav ul li a");
 
   // 1) Quan carreguem la pàgina, posem .actiu al link guardat
-  const guardat = localStorage.getItem("menu-actiu");
+  let guardat = localStorage.getItem("menu-actiu");
   if (guardat) {
     links.forEach(a => {
       if (a.getAttribute("href") === guardat) {
