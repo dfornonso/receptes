@@ -3,14 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detall 2</title>
+    <title>Detall 1</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="app.js"></script>
   </head>
   <body>
     <include src="./header.html"></include>
     <main id="principal">
-        <h1 data-aos="fade-up">Recepta2</h1>
+      <div class="container">
+        <h1 data-aos="fade-up">Recepta de truita de patates amb ceba</h1>
+        <figure class="imatge-principal">
+          <img src="img/truita.jpg" alt="Truita emplatada" />
+          <figcaption>Pizza acabada de sortir del forn</figcaption>
+        </figure>
+        <section aria-labelledby="instruccions-truita" class="instruccions">
+          <h2 id="instruccions-truita">Instruccions</h2>
+            <p>Per preparar una truita bàsica, bat uns quants ous en un bol amb una mica de sal fins que quedin ben homogenis. Si vols que surti més esponjosa, pots afegir-hi una cullerada de llet o d’aigua. És important barrejar bé perquè la truita quedi suau i uniforme.</p>
+            <p>Escalfa una paella amb un raig d’oli i, quan sigui calenta, aboca-hi els ous batuts. Mantén el foc a intensitat mitjana i, amb una espàtula, remou lleugerament el centre perquè quedi una textura més cremosa. Deixa que els laterals vagin quallant sense que el fons es cremi.</p>
+          <p>Quan tingui la consistència que prefereixes, doblega la truita amb cura i dóna-li uns segons més de cocció. Si la vols sucosa, retira-la abans; si la prefereixes més feta, deixa-la una mica més a la paella. Serveix-la immediatament per obtenir la millor textura.</p></section>
+        <section aria-labelledby="galeria-pizza" class="galeria">
+          <h2>Galeria d'imatges</h2>
+          <ul class="graella">
+            <li>
+              <img src="img/truita1.jpg" alt="Ingredients per fer una truita" />
+            </li>
+            <li>
+              <img src="img/truita2.jpg" alt="Patates al foc" />
+            </li>
+            <li>
+              <img src="img/truita3.jpg" alt="Pizza acabada" />
+            </li>
+          </ul>
+        </section>
+        <section aria-labelledby="video-truira" class="video">
+          <h2>Vídeo</h2>
+          <div d="video-truita" class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ngWWh5quKVQ?si=i39O6-ZkxdZFmfkf" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+      </div>
     </main>
     <include src="footer.html"></include>
   </body>
