@@ -14,17 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 1) Quan carreguem la pàgina, posem .actiu al link guardat
   let guardat = localStorage.getItem("menu-actiu");
-  if (guardat) {
-    links.forEach(a => {
-      if (a.getAttribute("href") === guardat) {
-        a.classList.add("actiu");
-      }
-    });
-  }
-  else {
+  if (!guardat) {
     guardat="/"
-  }
-
+  };
+  
+  links.forEach(a => {
+    if (a.getAttribute("href") === guardat) {
+      a.classList.add("actiu");
+    }
+  });
+  
   // 2) Quan CLICO, actualitzo el .actiu
   links.forEach(link => {
     link.addEventListener("click", () => {
