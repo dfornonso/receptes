@@ -1,9 +1,18 @@
+:root {
+    --gris: #f6f6f6;
+    --quasi-negre: #1d1d1d;
+    --blau: #8cb7c9;
+    
+    --sense-serif: Verdana, Tahoma, Arial, sans-serif;
+    --amb-serif: Georgia, 'Times New Roman', serif;
+}
 
 /* resetegem la configuració*/
 body {
   margin: 0;             
+  font-family: var(--sense-serif);
+  color: var(--quasi-negre);
   line-height: 1.5;      
-  color: black;
 }
 
 
@@ -14,6 +23,19 @@ body {
   padding: 0 1rem;      
 }
 
+
+footer {
+    background-color: var(--gris);
+    text-align: center;
+    padding: 20px 0px;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.autor{
+  font-size: 1rem;
+  font-weight: 700;
+}
 
 /* creem un enllaç al contingut principal*/
 .skip-link {
