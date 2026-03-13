@@ -10,7 +10,39 @@
   <body>
     <include src="./header.html"></include>
     <main id="principal">
-        <h1 data-aos="fade-up">Recepta1</h1>
+      <div class="container">
+        <h1 data-aos="fade-up">Recepta de Pizza Casolana</h1>
+        <figure class="imatge-principal">
+          <img src="img/pizza.jpg" alt="Pizza acabada de sortir del forn" />
+          <figcaption>Pizza acabada de sortir del forn</figcaption>
+        </figure>
+        <section aria-labelledby="instruccions-pizza" class="instruccions">
+          <h2 id="instruccions-pizza">Instruccions</h2>
+            <p>La pizza és una massa plana amb salsa i formatge que admet infinites combinacions d’ingredients. La clau d’un bon resultat és una massa amb fermentació adequada i un forn ben calent.</p>
+            <p>La massa es prepara amb farina, aigua, llevat, sal i un punt d’oli. Després d’un primer pastat, es deixa reposar fins que dobli el volum, es boleja i es deixa relaxar abans d’estirar.</p>
+            <p>Amb la base preparada, s’hi afegeixen la salsa de tomàquet i el formatge. Es pot completar amb ingredients com pernil, xampinyons o olives. Enforna fins a daurar i fondre el formatge.</p>
+       </section>
+        <section aria-labelledby="galeria-pizza" class="galeria">
+          <h2>Galeria d'imatges</h2>
+          <ul class="graella">
+            <li>
+              <img src="img/pizza1.jpg" alt="Preparació de la massa de la pizza" />
+            </li>
+            <li>
+              <img src="img/pizza2.jpg" alt="Pizza amb ingredients abans d’enfornar" />
+            </li>
+            <li>
+              <img src="img/pizza3.jpg" alt="Pizza acabada" />
+            </li>
+          </ul>
+        </section>
+        <section aria-labelledby="video-pizza" class="video">
+          <h2>Vídeo</h2>
+          <div d="video-pizza" class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PFshCovoytQ?si=xU4oIM-Q6N_r7a7h" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+      </div>
     </main>
     <include src="footer.html"></include>
   </body>

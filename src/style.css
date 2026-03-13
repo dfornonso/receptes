@@ -66,3 +66,35 @@ body {
   text-align: center;
 }
 
+
+
+.imatge-principal { 
+  margin: 0; 
+}
+
+.imatge-principal img { 
+  width: 30%; 
+  height: auto; 
+  border-radius: .5rem;
+}
+.imatge-principal figcaption { 
+  font-size: .6+8rem; 
+  color: #555;
+}
+
+
+.graella img { 
+  width: 100%; 
+  height: auto; 
+  border-radius: 
+  .5rem; 
+}
+
+
+
+.video iframe{ 
+    border: 0;
+    width: 50%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
