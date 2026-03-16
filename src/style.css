@@ -1,3 +1,4 @@
+/* definim variables globals per color i tipografia */
 :root {
     --gris: #f6f6f6;
     --quasi-negre: #1d1d1d;
@@ -7,7 +8,7 @@
     --amb-serif: Georgia, 'Times New Roman', serif;
 }
 
-/* resetegem la configuració*/
+/* resetegem la configuració */
 body {
   margin: 0;             
   font-family: var(--sense-serif);
@@ -23,20 +24,23 @@ body {
   padding: 0 1rem;      
 }
 
+/* centrem el menú */
 header{
   text-align: center;
 }
+
+/* posem text en majúscules i una ratlla a dalt i baix del mení*/
 header nav{
-  text-align: center;
   text-transform: uppercase;
   border-bottom: 2px solid var(--blau);
 }
-
 header nav li:first-child{
   border-bottom: 2px solid var(--blau);
 
-margin-bottom: 1em;
+  margin-bottom: 1em;
 }
+
+/* treiem la vinyeta i configurem el text del menú */
 header nav a {
   text-decoration: none;
   color: var(--quasi-negre);
@@ -50,6 +54,7 @@ header nav ul {
     margin-left: 0;
 }
 
+/* configurem el menú per diferencia la pàgina activa */
 nav a.actiu {
   text-decoration: underline;
   text-decoration-thickness: 3px;
@@ -58,8 +63,7 @@ nav a.actiu {
   font-weight: 700;    
 }
 
-
-
+/* definim el peu de pàgina */
 footer {
   background-color: var(--gris);
   text-align: center;
@@ -67,13 +71,12 @@ footer {
   width: 100%;
   font-size: 0.8rem;
 }
-
 .autor{
   font-size: 1rem;
   font-weight: 700;
 }
 
-/* creem un enllaç al contingut principal*/
+/* creem un enllaç al contingut principal i el desplacem fora de la pantalla*/
 .skip-link {
   position: absolute;
   top: -40px;
@@ -84,8 +87,7 @@ footer {
   top: 0;       
 }
 
-
-/* Configurem la graella */
+/* Configurem la graella per mostrar imatges*/
 .graella {
   list-style: none;
   padding: 0;
@@ -94,8 +96,14 @@ footer {
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
+.graella img { 
+  width: 100%; 
+  height: auto; 
+  border-radius: 
+  .5rem; 
+}
 
-/* Configurem la targeta */
+/* Configurem la targeta que es mostra dins la graella*/
 .targeta {
   display: block;
   text-decoration: none;
@@ -109,7 +117,7 @@ footer {
   transform: translateY(-3px);
 }
 
-/* Definim imatges recepta */
+/* configurem la imatge de la targeta */
 .targeta img {
   width: 100%;
   height: auto;
@@ -117,19 +125,17 @@ footer {
   border-radius: .25rem;
 }
 
-/* Configurem títol de recepta */
+/* Configurem el títol de la targeta */
 .targeta h2 {
   margin: 0;
   font-size: 1rem;
   text-align: center;
 }
 
-
-
+/* configurem al imatge principal */
 .imatge-principal { 
   margin: 0; 
 }
-
 .imatge-principal img { 
   width: 30%; 
   height: auto; 
@@ -141,18 +147,71 @@ footer {
 }
 
 
-.graella img { 
-  width: 100%; 
-  height: auto; 
-  border-radius: 
-  .5rem; 
-}
-
-
-
+/* configurem el video */
 .video iframe{ 
     border: 0;
     width: 50%;
     height: auto;
     aspect-ratio: 16 / 9;
+}
+
+/* Responsibe per a mobil <= 600px */
+@media (max-width: 600px) {
+
+  /* fem el logo més petit */
+  header img {
+    width: 60px;
+    height: auto;
+  }
+  /* treiem espai del footer */
+  footer {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+
+  /* fem que sol es mostri una imatge */
+  .graella {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem;
+  }
+
+  /* fem que la imatge principal ocupi tot l'ample */
+  .imatge-principal img {
+    width: 100% !important;
+  }
+
+  /* fem que el video ocupi tot l'ample */
+  .video-container,
+  .video iframe {
+    width: 100% !important;
+    height: auto;
+  }
+}
+
+/* responsibe per tauletes (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  /* fem que la imatge principal ocupi 1/3 de pantalla */
+  .imatge-principal img {
+    width: 33%;
+  }
+
+  /* fem que sol es mostrin dos imatges */
+  .graella {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* fem que el footer ocupi menys espau*/
+  footer {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+    /* fem que el video ocupi tot l'ample */
+  .video-container,
+  .video iframe {
+    width: 100% !important;
+    height: auto;
+  }
 }
