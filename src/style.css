@@ -8,6 +8,10 @@
     --amb-serif: Georgia, 'Times New Roman', serif;
 }
 
+html {
+  overflow-y: scroll
+}
+
 /* resetegem la configuració */
 body {
   margin: 0;             
@@ -70,6 +74,7 @@ footer {
   padding: 20px 0px;
   width: 100%;
   font-size: 0.8rem;
+  margin-top: 40px;
 }
 .autor{
   font-size: 1rem;
@@ -142,10 +147,9 @@ footer {
   border-radius: .5rem;
 }
 .imatge-principal figcaption { 
-  font-size: .6em; 
+  font-size: .8rem; 
   color: #555;
 }
-
 
 /* configurem el video */
 .video iframe{ 
