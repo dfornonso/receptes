@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll("nav ul li a");
 
   // 1) Quan carreguem la pàgina, posem .actiu al link guardat
-  let guardat = localStorage.getItem("menu-actiu");
+  let guardat = sessionStorage.getItem("menu-actiu");
   if (!guardat) {
     guardat="/"
   };
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.add("actiu");
 
       // guardo quin link he clicat
-      localStorage.setItem("menu-actiu", link.getAttribute("href"));
+      sessionStorage.setItem("menu-actiu", link.getAttribute("href"));
     });
   });
 });
