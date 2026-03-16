@@ -54,8 +54,8 @@ nav a.actiu {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 3px;
-  color: inherit;      /* o tria un color específic si vols */
-  font-weight: 700;    /* opcional */
+  color: inherit;     
+  font-weight: 700;    
 }
 
 
