@@ -99,8 +99,10 @@ footer {
   margin: 1rem 0;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  /*grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));*/
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+
 .graella img { 
   width: 100%; 
   height: auto; 
