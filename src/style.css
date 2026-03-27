@@ -161,6 +161,14 @@ footer {
     aspect-ratio: 16 / 9;
 }
 
+blockquote{
+    /* Vora citacions blava  solida de 4px*/
+    border-left: 4px solid var(--blau);
+    /* Posem espai entre la barra i el text */
+    padding-left: 10px;
+    font-weight: 700;
+}
+
 /* Responsibe per a mobil <= 600px */
 @media (max-width: 600px) {
 
