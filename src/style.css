@@ -3,7 +3,8 @@
     --gris: #f6f6f6;
     --quasi-negre: #1d1d1d;
     --blau: #8cb7c9;
-    
+    --blau-exterior: #0050c8;
+    --blau-interior:  #00aad4;
     --sense-serif: Verdana, Tahoma, Arial, sans-serif;
     --amb-serif: Georgia, 'Times New Roman', serif;
 }
@@ -169,14 +170,62 @@ blockquote{
     font-weight: 700;
 }
 
+
+
+/* Configurem i animem el SVG del menu*/
+/* Plat */
+.plat-exterior {
+  fill: none;
+  stroke: var(--blau-exterior);
+  stroke-width: 13.2653;
+}
+
+.plat-interior {
+  fill:var(--blau-interior);
+}
+
+/* Coberts */
+.coberts {
+  fill: var(--blau-interior);
+  stroke: var(--quasi-negre);
+  stroke-width: 1.24489;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 1s ease, fill 2s ease;
+}
+
+/* Hover: la forquilla i el ganivet es toquen */
+.logo:hover .forquilla {
+  transform: translateX(80px) rotate(30deg);
+}
+
+.logo:hover .ganivet {
+  transform: translateX(-80px) rotate(-30deg);
+}
+
+/* Hover: els coberts canvien de color */
+.logo:hover .coberts {
+  fill: var(--blau-exterior);
+}
+
+
 /* Responsibe per a mobil <= 600px */
 @media (max-width: 600px) {
 
   /* fem el logo més petit */
-  header img {
+  header .logo {
     width: 60px;
     height: auto;
+    margin: 0 auto;
+    display: block;
+
   }
+
+  header .logo svg {
+    width: 100%;
+    height: auto;
+  }
+
   /* treiem espai del footer */
   footer {
     margin-top: 10px;
@@ -227,5 +276,13 @@ blockquote{
   .video iframe {
     width: 100% !important;
     height: auto;
+  }
+}
+
+/* Respectem la preferència de moviment reduït */
+@media (prefers-reduced-motion: reduce) {
+  .coberts {
+    transition: none;
+    transform: none;
   }
 }
