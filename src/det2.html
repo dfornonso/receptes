@@ -16,18 +16,13 @@
 
         <figure class="imatge-principal clip-cercle">
           <picture>
-            <source
-              media="(max-width: 600px)"
-              srcset="img/truita-480.jpg"
-            />
-            <source
-              media="(min-width: 601px)"
-              srcset="img/truita-800.jpg"
-            />
-            <img
-              src="img/truita-800.jpg"
-              alt="Truita de patates."
-            />
+              <source srcset="img/truita-480.jpg?as=avif" media="(max-width: 600px)">
+              <source srcset="img/truita-800.jpg?as=avif" media="(min-width: 601px)">
+
+              <source srcset="img/truita-480.jpg?as=webp" media="(max-width: 600px)">
+              <source srcset="img/truita-800.jpg?as=webp" media="(min-width: 601px)">
+              
+              <img src="img/pizza-800.jpg" alt="Truita de patates.">
           </picture>
 
           <figcaption>

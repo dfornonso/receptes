@@ -14,21 +14,21 @@
       <div class="container">
         <h1 data-aos="fade-up">Recepta de Pizza Casolana</h1>
 
-        <figure class="imatge-principal clip-cercle">
-          <picture>
-            <source
-              media="(max-width: 600px)"
-              srcset="img/pizza-480.jpg"
-            />
-            <source
-              media="(min-width: 601px)"
-              srcset="img/pizza-800.jpg"
-            />
-            <img
-              src="img/pizza-800.jpg"
-              alt="Pizza casolana acabada de sortir del forn."
-            />
-          </picture>
+          <figure class="imatge-principal clip-cercle">
+            <picture>
+              <source srcset="img/pizza-480.jpg?as=avif" media="(max-width: 600px)">
+              <source srcset="img/pizza-800.jpg?as=avif" media="(min-width: 601px)">
+
+              <source srcset="img/pizza-480.jpg?as=webp" media="(max-width: 600px)">
+              <source srcset="img/pizza-800.jpg?as=webp" media="(min-width: 601px)">
+              
+              <img src="img/pizza-800.jpg" alt="Pizza casolana acabada de sortir del forn.">
+            </picture>
+
+            <figcaption>
+              Pizza casolana acabada de sortir del forn.
+            </figcaption>
+          </figure>
 
           <figcaption>
             Pizza casolana acabada de sortir del forn.
