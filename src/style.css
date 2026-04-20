@@ -100,7 +100,6 @@ footer {
   margin: 1rem 0;
   display: grid;
   gap: 1rem;
-  /*grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));*/
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
@@ -141,7 +140,7 @@ footer {
 }
 
 /* retallem la imatge principal amb clip-path*/
-.clip_cercle,
+.clip-cercle,
 .clip-triangles {
   margin: 2rem auto;
   text-align: center;
@@ -365,6 +364,7 @@ blockquote{
   /* fem que la imatge principal ocupi tot l'ample */
   .imatge-principal img {
     width: 100% !important;
+    clip-path: none;
   }
 
   /* fem que el video ocupi tot l'ample */
@@ -373,12 +373,6 @@ blockquote{
     width: 100% !important;
     height: auto;
   }
-
-  .imatge-principal img {
-      width: 100% !important;
-      clip-path: none;
-  }
-
 }
 
 
