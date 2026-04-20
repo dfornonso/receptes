@@ -14,9 +14,18 @@
       <div class="container">
         <h1 data-aos="fade-up">Portal de Receptes</h1>
         <figure class="imatge-portada clip-triangles">
-          <img src="img/nevera.jpg" alt="Llista de receptes" >
-          <figcaption>Llista de receptes penjada a la nevera.</figcaption>
+          <picture>
+            <source
+              media="(max-width: 600px)"
+              srcset="img/nevera-480.jpg">
+            <img
+              src="img/nevera-800.jpg"
+              alt="Llista de receptes penjada a la nevera">
+          </picture>
+
+          <figcaption> Llista de receptes penjada a la nevera. </figcaption>
         </figure>
+
         <p>Aquesta web pretén <strong>digitalitzar la llista de receptes que tinc penjada a la nevera</strong>per tal de fer-la accessible des de qualsevol dispositiu mòbil i facilitar que es pugui consultar i compartir facilment.</p>
        
         <blockquote>Durant el desenvolupament d'aquesta web no s'ha malmès cap ingredient.<br> Totes les receptes estan basades en fets reals i han estat elaborades per mí.
